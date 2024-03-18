@@ -12,5 +12,5 @@ public interface PorudzbinaService extends CrudService<Porudzbina> {
 
 	List<Porudzbina> getPorudzbinasByPlaceno(boolean placeno);
 	
-	List<Porudzbina> findByForeignKey(Dobavljac dobavljac);
+	List<Porudzbina> getByForeignKey(Dobavljac dobavljac);
 }
