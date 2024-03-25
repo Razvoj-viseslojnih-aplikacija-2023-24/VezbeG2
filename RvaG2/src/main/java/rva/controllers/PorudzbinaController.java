@@ -44,8 +44,8 @@ public class PorudzbinaController {
 		return ResponseEntity.status(404).body("Resource with requested ID: " + id + " does not exist!");
 	}
 	
-	@GetMapping("/porudzbina/naziv/{placeno}")
-	public ResponseEntity<?> getPorudzbinasByNaziv(@PathVariable boolean placeno){
+	@GetMapping("/porudzbina/placeno/{placeno}")
+	public ResponseEntity<?> getPorudzbinasByPlaceno(@PathVariable boolean placeno){
 		List<Porudzbina> porudzbinai = service.getPorudzbinasByPlaceno(placeno);
 		if(porudzbinai.isEmpty()) {
 			return ResponseEntity.status(404).body("Resources with Placeno: " + placeno + " do not exist!");
