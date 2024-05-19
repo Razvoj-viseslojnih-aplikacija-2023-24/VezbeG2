@@ -7,7 +7,7 @@
       
       <ng-container matColumnDef="datum">
         <mat-header-cell *matHeaderCellDef>Datum</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.datum | date:'dd.mm.yyyy.' }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.datum | date:'dd.MM.yyyy.' }}</mat-cell>
       </ng-container>
       
       <ng-container matColumnDef="id">
@@ -17,7 +17,7 @@
       
       <ng-container matColumnDef="isporuceno">
         <mat-header-cell *matHeaderCellDef>Isporuceno</mat-header-cell>
-        <mat-cell *matCellDef="let row">{{ row.isporuceno | date:'dd.mm.yyyy.' }}</mat-cell>
+        <mat-cell *matCellDef="let row">{{ row.isporuceno | date:'dd.MM.yyyy.' }}</mat-cell>
       </ng-container>
 
       <ng-container matColumnDef="iznos">
@@ -42,10 +42,10 @@
           </button>
         </mat-header-cell>
         <mat-cell *matCellDef="let row; let i = index">
-          <button mat-icon-button color="primary" (click)="openDialog(2,row.id, row.naziv, row.proizvodjac)" >
+          <button mat-icon-button color="primary" (click)="openDialog(2,row.id, row.datum, row.isporuceno, row.iznos, row.placeno, row.dobavljac )" >
             <mat-icon color="primary" aria-label="Edit">edit</mat-icon>
           </button>
-          <button mat-icon-button color="primary" (click)="openDialog(3,row.id, row.naziv, row.proizvodjac)">
+          <button mat-icon-button color="primary" (click)="openDialog(3,row.id, row.datum, row.isporuceno, row.iznos, row.placeno, row.dobavljac)">
             <mat-icon color= "warn" aria-label="Delete">delete</mat-icon>
           </button>
         </mat-cell>
